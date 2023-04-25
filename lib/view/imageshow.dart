@@ -32,10 +32,10 @@ class _ImageShowState extends State<ImageShow> {
 
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.favorite_border_rounded,color: Colors.red,),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.share),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.delete_forever_rounded),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.info_outline_rounded),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.more_vert_rounded),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.share,color: Colors.red,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.delete_forever_rounded,color: Colors.red,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.info_outline_rounded,color: Colors.red,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.more_vert_rounded,color: Colors.red,),label: ""),
         ],
       ),
       body: Center(
