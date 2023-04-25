@@ -26,6 +26,14 @@ class _StoriesGalleryState extends State<StoriesGallery> {
     return Scaffold(
         body: Column(
           children: [
+            // GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //   crossAxisCount: 2
+            // ),
+            //   scrollDirection: Axis.vertical,
+            //   children: [
+            //
+            //   ],
+            // ),
             Row(
               children: [
                 InkWell(onTap: () {
@@ -45,7 +53,7 @@ class _StoriesGalleryState extends State<StoriesGallery> {
             ),
 
             ElevatedButton(onPressed: () {
-              temprun();
+              gpT!.temprun();
             }, child: Text("Button")),
 
 
