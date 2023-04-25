@@ -20,7 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/logo/logo.png",height: 120,width: 120,fit: BoxFit.fill,)
+              Image.asset("assets/logo/logo.png",height: 120,width: 120,fit: BoxFit.fill,),
+              SizedBox(height: 50,),
+              Text("Gallery Zone",style: TextStyle(fontSize: 35,color: Colors.red),)
             ],
           ),
         ),
