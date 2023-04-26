@@ -4,7 +4,7 @@ import 'package:gallery_zone/provider/gallery_provider.dart';
 import 'package:gallery_zone/splashscreen/splashscreen.dart';
 import 'package:gallery_zone/view/photos_gallery.dart';
 import 'package:gallery_zone/view/album.dart';
-import 'package:gallery_zone/view/videos_gallery.dart';
+import 'package:gallery_zone/view/stories_gallery.dart';
 import 'package:provider/provider.dart';
 
 class Home_Screen extends StatefulWidget {

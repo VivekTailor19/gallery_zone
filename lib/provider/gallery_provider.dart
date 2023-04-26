@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:gallery_zone/view/photos_gallery.dart';
 import 'package:gallery_zone/view/album.dart';
-import 'package:gallery_zone/view/videos_gallery.dart';
+import 'package:gallery_zone/view/stories_gallery.dart';
 
 import '../model/gallery_model.dart';
 
