@@ -216,6 +216,15 @@ class GalleryProvider extends ChangeNotifier
   ];
 
 
+  List<GalleryModel> albumlist = [
+    GalleryModel(name: "Animals",imgpath: "assets/images/pack/animalpack.jpg"),
+    GalleryModel(name: "Bing",imgpath: "assets/images/pack/bingpack.jpg"),
+    GalleryModel(name: "Nature",imgpath: "assets/images/pack/naturepack.jpg"),
+    GalleryModel(name: "Cities",imgpath: "assets/images/pack/citiespack.jpg"),
+    GalleryModel(name: "Car",imgpath: "assets/images/pack/carpack.jpg"),
+  ];
+
+
 
 
 
