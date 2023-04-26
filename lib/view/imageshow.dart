@@ -49,6 +49,7 @@ class _ImageShowState extends State<ImageShow> {
 
               return Image.asset("${gpT!.allphotos[i]}",fit: BoxFit.fill,);
 
+
             },
             scrollDirection: Axis.horizontal,
             itemCount: gpT!.allphotos.length,
