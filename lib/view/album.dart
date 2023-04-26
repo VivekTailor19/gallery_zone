@@ -26,11 +26,11 @@ class _StoriesGalleryState extends State<StoriesGallery> {
     gpF = Provider.of<GalleryProvider>(context,listen: false);
 
     List<GalleryModel> albumlist = [
-      GalleryModel(name: "Animals",list: gpF!.animallist),
-      GalleryModel(name: "Bing",list: gpF!.binglist),
-      GalleryModel(name: "Nature",list: gpF!.naturelist),
-      GalleryModel(name: "Cities",list: gpF!.citieslist),
-      GalleryModel(name: "Car",list: gpF!.carlist),
+      GalleryModel(name: "Animals",list: gpF!.animallist,imgpath: "assets/images/pack/animalpack.jpg"),
+      GalleryModel(name: "Bing",list: gpF!.binglist,imgpath: "assets/images/pack/bingpack.jpg"),
+      GalleryModel(name: "Nature",list: gpF!.naturelist,imgpath: "assets/images/pack/naturepack.jpg"),
+      GalleryModel(name: "Cities",list: gpF!.citieslist,imgpath: "assets/images/pack/citiespack.jpg"),
+      GalleryModel(name: "Car",list: gpF!.carlist,imgpath: "assets/images/pack/carpack.jpg"),
 
 
     ];
@@ -61,7 +61,7 @@ class _StoriesGalleryState extends State<StoriesGallery> {
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
                 itemBuilder: (context, index) {
-                  return Albumname(name: albumlist[index].name, index:index);
+                  return Albumname(albumlist[index],index);
                 },
                 itemCount: albumlist.length,
               ),
@@ -88,7 +88,7 @@ class _StoriesGalleryState extends State<StoriesGallery> {
     );
   }
 
-  Widget Albumname({String? name, int? index})
+  Widget Albumname(GalleryModel gm ,int index)
   {
     return Padding(
       padding: const EdgeInsets.all(10),
@@ -105,7 +105,6 @@ class _StoriesGalleryState extends State<StoriesGallery> {
               onTap: () {
 
 
-
               },
 
               child: Container(
@@ -113,11 +112,11 @@ class _StoriesGalleryState extends State<StoriesGallery> {
                 width: 160,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(image: AssetImage("assets/album1.png"),fit: BoxFit.fill,)
+                    image: DecorationImage(image: AssetImage("${gm.imgpath}"),fit: BoxFit.fill,)
                 ),
               ),
             ),
-            Text("$name",style: TextStyle(fontSize: 15,overflow: TextOverflow.ellipsis),)
+            Text("${gm.name}",style: TextStyle(fontSize: 15,overflow: TextOverflow.ellipsis),)
           ],
         ),
       ),

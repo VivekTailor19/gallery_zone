@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Image.asset("assets/logo/logo.png",height: 120,width: 120,fit: BoxFit.fill,),
               SizedBox(height: 50,),
-              Text("Gallery Zone",style: TextStyle(fontSize: 35,color: Colors.red),)
+              Text("Gallery Zone",style: GoogleFonts.breeSerif(fontSize: 35,color: Colors.red.shade200),)
             ],
           ),
         ),

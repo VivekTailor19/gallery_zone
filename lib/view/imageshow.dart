@@ -42,15 +42,17 @@ class _ImageShowState extends State<ImageShow> {
       ),
       body: Center(
         child: Container(height: 400,width: 360,
+          color: Colors.transparent,
 
 
           child: PageView.builder(
             itemBuilder: (context, index) {
 
-              return Image.asset("${gpT!.allphotos[i]}",fit: BoxFit.fill,);
+              return Image.asset("${gpT!.allphotos[index]}",fit: BoxFit.fill,);
 
 
             },
+            controller: PageController(initialPage: i),
             scrollDirection: Axis.horizontal,
             itemCount: gpT!.allphotos.length,
 

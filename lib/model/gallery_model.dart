@@ -1,7 +1,7 @@
 class GalleryModel
 {
-  String? name;
+  String? name,imgpath;
   List? list;
 
-  GalleryModel({this.name, this.list});
+  GalleryModel({this.name, this.list,this.imgpath});
 }
