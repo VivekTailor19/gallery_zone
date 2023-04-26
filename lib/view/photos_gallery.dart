@@ -23,17 +23,26 @@ class _PhotosGalleryState extends State<PhotosGallery> {
 
 
     return Scaffold(
-      body: GridView.builder(
-        itemCount: gpF!.allphotos.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            mainAxisSpacing: 5,
-            crossAxisSpacing: 5,
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: GridView.builder(
+          itemCount: gpF!.allphotos.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 5,
+              crossAxisSpacing: 5,
 
+          ),
+            itemBuilder: (context, index) {
+             return InkWell(
+               onTap: () {
+                 Navigator.pushNamed(context, "imgshow",arguments: index);
+               },
+               child: Container(decoration: BoxDecoration(image: DecorationImage(image: AssetImage("${gpT!.allphotos[index]}"),fit: BoxFit.fill )),
+                   ),
+             );
+            },
         ),
-          itemBuilder: (context, index) {
-           return Image.asset("${gpT!.allphotos[index]}",height: 80,width: 80,fit:BoxFit.fill,);
-          },
       ),
     );
   }

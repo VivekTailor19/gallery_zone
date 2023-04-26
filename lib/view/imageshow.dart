@@ -21,6 +21,8 @@ class _ImageShowState extends State<ImageShow> {
     gpT = Provider.of<GalleryProvider>(context,listen: true);
     gpF = Provider.of<GalleryProvider>(context,listen: false);
 
+    int i = ModalRoute.of(context)!.settings.arguments as int;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(icon: Icon(Icons.arrow_back_ios),onPressed: () {
@@ -45,11 +47,11 @@ class _ImageShowState extends State<ImageShow> {
           child: PageView.builder(
             itemBuilder: (context, index) {
 
-              return Image.asset("${gpT!.animallist[index]}",fit: BoxFit.contain,);
+              return Image.asset("${gpT!.allphotos[i]}",fit: BoxFit.fill,);
 
             },
             scrollDirection: Axis.horizontal,
-            itemCount: gpT!.animallist.length,
+            itemCount: gpT!.allphotos.length,
 
           ),
         ),

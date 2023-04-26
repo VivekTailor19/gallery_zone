@@ -65,13 +65,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+    - assets/logo/
     - assets/images/animal/
     - assets/images/bing/
     - assets/images/car/
     - assets/images/cities/
     - assets/images/movie/
     - assets/images/nature/
-    - assets/logo/
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
