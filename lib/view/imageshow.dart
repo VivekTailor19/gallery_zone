@@ -24,20 +24,23 @@ class _ImageShowState extends State<ImageShow> {
     int i = ModalRoute.of(context)!.settings.arguments as int;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: IconButton(icon: Icon(Icons.arrow_back_ios),onPressed: () {
           Navigator.pop(context);
         },),
-        title: Text("Photo 1"),
+        title: Text("Photo $i / ${gpT!.allphotos.length}"),
       ),
       bottomNavigationBar: BottomNavigationBar(
 
+
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border_rounded,color: Colors.red,),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.share,color: Colors.red,),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.delete_forever_rounded,color: Colors.red,),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.info_outline_rounded,color: Colors.red,),label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.more_vert_rounded,color: Colors.red,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border_rounded,color: Colors.white,),label: "",backgroundColor: Colors.black,),
+          BottomNavigationBarItem(icon: Icon(Icons.share,color: Colors.white,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.delete_forever_rounded,color: Colors.white,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.info_outline_rounded,color: Colors.white,),label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.more_vert_rounded,color: Colors.white,),label: ""),
         ],
       ),
       body: Center(

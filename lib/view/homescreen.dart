@@ -28,6 +28,23 @@ class _Home_ScreenState extends State<Home_Screen> {
 
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(backgroundColor: Colors.white,
+          elevation: 0,
+          title: Text("Gallery Zone",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
+          actions: [
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Icon(Icons.camera_alt_outlined,color: Colors.lightBlue,size: 25,),
+            ),
+            Icon(Icons.image_search,color: Colors.lightBlue,size: 25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Icon(Icons.more_vert_rounded,color: Colors.lightBlue,size: 25),
+            ),
+
+          ],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (value) {
             gpF!.selectscreen(value);
