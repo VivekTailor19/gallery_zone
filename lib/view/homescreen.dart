@@ -52,7 +52,7 @@ class _Home_ScreenState extends State<Home_Screen> {
           currentIndex: gpT!.selindex,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.photo_library_outlined),label: "Photos"),
-            BottomNavigationBarItem(icon: Icon(Icons.video_collection_outlined),label: "Videos"),
+            BottomNavigationBarItem(icon: Icon(Icons.amp_stories),label: "Stories"),
             BottomNavigationBarItem(icon: Icon(Icons.my_library_add_outlined),label: "Album"),
           ],
 

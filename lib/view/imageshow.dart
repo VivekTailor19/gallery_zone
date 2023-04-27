@@ -25,13 +25,13 @@ class _ImageShowState extends State<ImageShow> {
 
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios),onPressed: () {
-          Navigator.pop(context);
-        },),
-        title: Text("Photo $i / ${gpT!.allphotos.length}"),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.black,
+      //   leading: IconButton(icon: Icon(Icons.arrow_back_ios),onPressed: () {
+      //     Navigator.pop(context);
+      //   },),
+      //   title: Text("Photo $i / ${gpT!.allphotos.length}"),
+      // ),
       bottomNavigationBar: BottomNavigationBar(
 
 
@@ -51,7 +51,23 @@ class _ImageShowState extends State<ImageShow> {
           child: PageView.builder(
             itemBuilder: (context, index) {
 
-              return Image.asset("${gpT!.allphotos[index]}",fit: BoxFit.fill,);
+              return
+                Column(
+
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        IconButton(icon: Icon(Icons.arrow_back_ios),onPressed: () {
+                        Navigator.pop(context);
+                      },),
+                        SizedBox(height: 15,),
+                        Text("Photo ${gpT!.allphotos[index]} / ${gpT!.allphotos.length}",style: TextStyle(color: Colors.white),),
+                      ],
+                    ),
+                    Image.asset("${gpT!.allphotos[index]}",),
+                  ],
+                );
 
 
             },

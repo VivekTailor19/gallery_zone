@@ -23,7 +23,7 @@ class _VideosGalleryState extends State<VideosGallery> {
 
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         // appBar: AppBar(backgroundColor: Colors.white,
         //   elevation: 0,
         //   title: Text("Stories",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
@@ -40,25 +40,18 @@ class _VideosGalleryState extends State<VideosGallery> {
         // ),
 
         body: Center(
-          child: Container(height: 500,width: 360,
-            //color: Colors.transparent,
+          child: PageView.builder(
 
+            itemBuilder: (context, index) {
 
-            child: PageView.builder(
-              itemBuilder: (context, index) {
+              return Image.asset("${gpT!.allphotos[index]}",height: 500,);
 
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Image.asset("${gpT!.allphotos[index]}",fit: BoxFit.contain,),
-                );
+            },
+            pageSnapping: false,
 
-              },
-              pageSnapping: false,
+            scrollDirection: Axis.horizontal,
+            itemCount: 30,
 
-              scrollDirection: Axis.horizontal,
-              itemCount: 30,
-
-            ),
           ),
         ),
 
